@@ -6,9 +6,15 @@ import { Sobre } from "@/app/components/Sobre/Sobre";
 import { Servicos } from "@/app/components/Servicos/Servicos";
 import { Equipe } from "@/app/components/Equipe/Equipe";
 import { Unidades } from "@/app/components/Unidades/Unidades";
+import type { Metadata } from 'next'
 import { AgendamentoModal } from "@/app/components/Cards/Agendamentos/AgendamentoModal";
 
-
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
+}
 export default function Inicio() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
